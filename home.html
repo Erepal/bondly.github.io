@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bondly - Stronger Relationships Start Here</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --primary:#ff4f87;
+    --secondary:#ff85a8;
+    --bg:#fff7fa;
+    --dark:#222;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#fff7fa,#ffeef5);
+    color:var(--dark);
+    overflow-x:hidden;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 8%;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+
+    backdrop-filter:blur(20px);
+    background:rgba(255,255,255,.6);
+    border-bottom:1px solid rgba(255,255,255,.4);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:var(--primary);
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#444;
+    font-weight:500;
+}
+
+.btn{
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    color:white;
+    padding:14px 24px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    box-shadow:0 10px 30px rgba(255,79,135,.25);
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:120px 8% 80px;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero h1{
+    font-size:4rem;
+    line-height:1.1;
+    margin-bottom:25px;
+}
+
+.gradient-text{
+    background:linear-gradient(135deg,#ff4f87,#ff7ba7);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+    font-size:1.2rem;
+    color:#666;
+    max-width:700px;
+    margin:auto;
+    margin-bottom:40px;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.glass-btn{
+    background:rgba(255,255,255,.6);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.5);
+    color:#333;
+}
+
+.section{
+    padding:100px 8%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:2.5rem;
+    margin-bottom:10px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:rgba(255,255,255,.65);
+    backdrop-filter:blur(20px);
+    border-radius:28px;
+    padding:30px;
+    border:1px solid rgba(255,255,255,.5);
+    box-shadow:0 15px 40px rgba(0,0,0,.05);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    margin:15px 0;
+}
+
+.card-icon{
+    font-size:40px;
+}
+
+.testimonials{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.quote{
+    background:white;
+    padding:30px;
+    border-radius:24px;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+}
+
+.cta{
+    text-align:center;
+    background:linear-gradient(135deg,#ff4f87,#ff7ba7);
+    color:white;
+    padding:100px 8%;
+}
+
+.cta h2{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.cta p{
+    max-width:700px;
+    margin:auto;
+    margin-bottom:40px;
+}
+
+.cta .btn{
+    background:white;
+    color:var(--primary);
+}
+
+footer{
+    padding:40px 8%;
+    text-align:center;
+    background:white;
+}
+
+footer a{
+    text-decoration:none;
+    color:#666;
+    margin:0 15px;
+}
+
+.floating-heart{
+    position:fixed;
+    font-size:24px;
+    opacity:.15;
+    animation:float 15s infinite linear;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+    }
+    to{
+        transform:translateY(-120vh);
+    }
+}
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:2.8rem;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .cta h2{
+        font-size:2rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="floating-heart" style="left:10%">❤️</div>
+<div class="floating-heart" style="left:40%;animation-delay:5s">💖</div>
+<div class="floating-heart" style="left:75%;animation-delay:10s">💕</div>
+
+<nav>
+    <div class="logo">❤️ Bondly</div>
+
+    <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#stories">Stories</a>
+        <a href="#download">Download</a>
+    </div>
+
+    <a href="#" class="btn">Get Started</a>
+</nav>
+
+<section class="hero">
+    <div class="hero-content">
+
+        <h1>
+            Stronger Connections.<br>
+            <span class="gradient-text">Healthier Relationships.</span>
+        </h1>
+
+        <p>
+            Bondly helps couples and individuals build stronger,
+            happier relationships through expert advice,
+            daily tips, communication guidance, and meaningful
+            connection challenges.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#" class="btn">Download App</a>
+            <a href="#" class="btn glass-btn">Learn More</a>
+        </div>
+
+    </div>
+</section>
+
+<section class="section" id="features">
+
+    <div class="section-title">
+        <h2>Why Bondly?</h2>
+        <p>Everything you need to strengthen your relationship.</p>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="card-icon">💡</div>
+            <h3>Daily Relationship Tips</h3>
+            <p>Personalized advice designed to help you grow together every day.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">💬</div>
+            <h3>Communication Guides</h3>
+            <p>Learn healthier communication habits and conflict resolution skills.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">❤️</div>
+            <h3>Connection Challenges</h3>
+            <p>Fun activities that bring couples closer together.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section" id="stories">
+
+    <div class="section-title">
+        <h2>What Users Say</h2>
+    </div>
+
+    <div class="testimonials">
+
+        <div class="quote">
+            “Bondly helped us communicate better and reconnect.”
+            <br><br><strong>— Sarah & David</strong>
+        </div>
+
+        <div class="quote">
+            “The daily tips are practical and genuinely useful.”
+            <br><br><strong>— Jessica</strong>
+        </div>
+
+        <div class="quote">
+            “A beautiful app that makes relationships feel intentional.”
+            <br><br><strong>— Michael</strong>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="cta" id="download">
+
+    <h2>Start Building a Better Relationship Today</h2>
+
+    <p>
+        Join thousands of people using Bondly to strengthen
+        communication, deepen trust, and create lasting connections.
+    </p>
+
+    <a href="#" class="btn">Download Bondly</a>
+
+</section>
+
+<footer>
+
+    <p>© 2026 Bondly. All Rights Reserved.</p>
+
+    <br>
+
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+    <a href="mailto:support@bondly.app">Contact</a>
+
+</footer>
+
+</body>
+</html>
