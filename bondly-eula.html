@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Bondly End User License Agreement (EULA).">
+<meta name="theme-color" content="#080808">
+<title>Bondly — End User License Agreement</title>
+
+<style>
+:root{
+    --bg:#080808;
+    --surface:#151515;
+    --surface-2:#1c1c1f;
+    --text:#f7f7f8;
+    --muted:#b7b7bd;
+    --red:#ef233c;
+    --red-dark:#b9152b;
+    --border:rgba(255,255,255,.09);
+    --shadow:0 24px 70px rgba(0,0,0,.38);
+    --radius:24px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+html{scroll-behavior:smooth}
+
+body{
+    font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:
+        radial-gradient(circle at 50% -10%, rgba(239,35,60,.16), transparent 34rem),
+        var(--bg);
+    color:var(--text);
+    line-height:1.75;
+}
+
+a{color:#ff5267;text-decoration:none}
+a:hover{text-decoration:underline}
+
+.container{
+    width:min(1080px, calc(100% - 36px));
+    margin:0 auto;
+}
+
+.hero{
+    position:relative;
+    overflow:hidden;
+    padding:82px 0 72px;
+    border-bottom:1px solid var(--border);
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:430px;
+    height:430px;
+    right:-150px;
+    top:-220px;
+    border-radius:50%;
+    background:rgba(239,35,60,.12);
+    filter:blur(30px);
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:13px;
+    margin-bottom:34px;
+    position:relative;
+}
+
+.logo{
+    width:48px;
+    height:48px;
+    border-radius:14px;
+    display:grid;
+    place-items:center;
+    background:linear-gradient(145deg,#ff314b,#d9152f);
+    color:white;
+    font-size:27px;
+    font-weight:800;
+    box-shadow:0 12px 35px rgba(239,35,60,.25);
+}
+
+.brand-name{
+    font-size:22px;
+    font-weight:750;
+    letter-spacing:-.4px;
+}
+
+.hero h1{
+    position:relative;
+    max-width:800px;
+    font-size:clamp(42px,7vw,72px);
+    line-height:1.02;
+    letter-spacing:-2.8px;
+    margin-bottom:22px;
+}
+
+.hero h1 span{color:var(--red)}
+
+.hero-intro{
+    position:relative;
+    max-width:760px;
+    color:var(--muted);
+    font-size:18px;
+}
+
+.meta{
+    position:relative;
+    display:inline-flex;
+    margin-top:28px;
+    padding:10px 16px;
+    border:1px solid var(--border);
+    background:rgba(255,255,255,.045);
+    border-radius:999px;
+    color:#d5d5da;
+    font-size:14px;
+}
+
+.layout{
+    display:grid;
+    grid-template-columns:240px minmax(0,1fr);
+    gap:34px;
+    padding:48px 0 90px;
+}
+
+.toc{
+    position:sticky;
+    top:24px;
+    align-self:start;
+    padding:22px;
+    border:1px solid var(--border);
+    border-radius:20px;
+    background:rgba(255,255,255,.035);
+    backdrop-filter:blur(18px);
+}
+
+.toc-title{
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:1.4px;
+    color:#85858c;
+    margin-bottom:13px;
+}
+
+.toc a{
+    display:block;
+    padding:7px 0;
+    color:#bdbdc4;
+    font-size:13px;
+}
+
+.toc a:hover{
+    color:white;
+    text-decoration:none;
+}
+
+.document{
+    min-width:0;
+}
+
+.notice{
+    padding:22px 24px;
+    border:1px solid rgba(239,35,60,.28);
+    border-left:4px solid var(--red);
+    background:linear-gradient(135deg,rgba(239,35,60,.10),rgba(255,255,255,.025));
+    border-radius:18px;
+    margin-bottom:28px;
+    color:#e3e3e7;
+}
+
+.notice strong{color:white}
+
+.section{
+    padding:31px 32px;
+    margin-bottom:18px;
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.025));
+    box-shadow:0 10px 40px rgba(0,0,0,.14);
+}
+
+.section h2{
+    color:white;
+    font-size:22px;
+    line-height:1.3;
+    margin-bottom:15px;
+    letter-spacing:-.4px;
+}
+
+.section h2 .number{
+    color:var(--red);
+    margin-right:8px;
+}
+
+.section p{
+    color:#c9c9cf;
+    margin-bottom:13px;
+}
+
+.section p:last-child{margin-bottom:0}
+
+.section ul{
+    margin:10px 0 4px 21px;
+    color:#c9c9cf;
+}
+
+.section li{
+    margin:7px 0;
+    padding-left:4px;
+}
+
+.contact{
+    display:grid;
+    grid-template-columns:1fr auto;
+    align-items:center;
+    gap:25px;
+    background:linear-gradient(135deg,rgba(239,35,60,.14),rgba(255,255,255,.035));
+}
+
+.contact-email{
+    display:inline-block;
+    margin-top:8px;
+    font-weight:650;
+}
+
+footer{
+    border-top:1px solid var(--border);
+    padding:35px 0 50px;
+    color:#77777e;
+    text-align:center;
+    font-size:13px;
+}
+
+.footer-links{
+    display:flex;
+    justify-content:center;
+    gap:22px;
+    flex-wrap:wrap;
+    margin-bottom:12px;
+}
+
+@media(max-width:820px){
+    .layout{grid-template-columns:1fr}
+    .toc{display:none}
+    .hero{padding:60px 0 52px}
+    .section{padding:25px 22px}
+    .contact{grid-template-columns:1fr}
+}
+
+@media(max-width:520px){
+    .container{width:min(100% - 24px,1080px)}
+    .hero h1{letter-spacing:-1.8px}
+    .hero-intro{font-size:16px}
+    .section h2{font-size:20px}
+}
+</style>
+</head>
+
+<body>
+
+<header class="hero">
+    <div class="container">
+        <div class="brand">
+            <div class="logo">B<span style="font-weight:500">♡</span></div>
+            <div class="brand-name">Bondly</div>
+        </div>
+
+        <h1>End User <span>License Agreement</span></h1>
+
+        <p class="hero-intro">
+            The terms governing your license and use of the Bondly mobile application
+            and related services provided by Erepal Technologies.
+        </p>
+
+        <div class="meta">Last Updated: June 2026</div>
+    </div>
+</header>
+
+<main class="container layout">
+
+    <aside class="toc">
+        <div class="toc-title">Contents</div>
+        <a href="#license">1. License Grant</a>
+        <a href="#purpose">2. Purpose of Bondly</a>
+        <a href="#eligibility">3. Eligibility</a>
+        <a href="#responsibilities">4. User Responsibilities</a>
+        <a href="#subscriptions">5. Premium Features</a>
+        <a href="#ip">6. Intellectual Property</a>
+        <a href="#feedback">7. User Content & Feedback</a>
+        <a href="#third-party">8. Third-Party Services</a>
+        <a href="#privacy">9. Privacy</a>
+        <a href="#warranties">10. Disclaimer</a>
+        <a href="#liability">11. Liability</a>
+        <a href="#termination">12. Termination</a>
+        <a href="#updates">13. App Updates</a>
+        <a href="#changes">14. EULA Changes</a>
+        <a href="#apple">15. Apple Terms</a>
+        <a href="#google">16. Google Play</a>
+        <a href="#law">17. Governing Law</a>
+        <a href="#severability">18. Severability</a>
+        <a href="#entire">19. Entire Agreement</a>
+        <a href="#contact">20. Contact</a>
+    </aside>
+
+    <article class="document">
+
+        <div class="notice">
+            <strong>Please read carefully.</strong>
+            By downloading, installing, accessing, or using Bondly, you agree to this
+            End User License Agreement. If you do not agree with these terms, do not
+            download, install, or use Bondly.
+        </div>
+
+        <section class="section" id="license">
+            <h2><span class="number">01</span> License Grant</h2>
+            <p>
+                Subject to your compliance with this Agreement, Erepal Technologies
+                grants you a limited, non-exclusive, non-transferable,
+                non-sublicensable, revocable license to download, install, and use
+                Bondly on a compatible device that you own or control.
+            </p>
+            <p>This license is provided solely for your personal, non-commercial use.</p>
+            <p>You may not:</p>
+            <ul>
+                <li>Copy, reproduce, or redistribute the App.</li>
+                <li>Modify, adapt, or create derivative works from the App.</li>
+                <li>Reverse engineer, decompile, disassemble, or attempt to derive the source code of the App, except where expressly permitted by applicable law.</li>
+                <li>Sell, rent, lease, sublicense, or otherwise transfer the App.</li>
+                <li>Use the App for unlawful purposes.</li>
+                <li>Remove or alter copyright, trademark, or other proprietary notices.</li>
+                <li>Use automated systems to extract or reproduce Bondly's content without our written permission.</li>
+            </ul>
+        </section>
+
+        <section class="section" id="purpose">
+            <h2><span class="number">02</span> Purpose of Bondly</h2>
+            <p>
+                Bondly provides educational relationship guidance, dating tips,
+                communication advice, personal-development content, and related
+                informational resources.
+            </p>
+            <p>
+                Bondly is intended to help users explore relationship topics and
+                develop greater awareness of communication, dating, relationships,
+                and personal growth.
+            </p>
+            <p>
+                <strong>Bondly is not a substitute for professional counseling,
+                psychotherapy, medical care, legal advice, or other professional
+                services.</strong>
+            </p>
+            <p>
+                Information provided through Bondly should not be interpreted as
+                professional advice or as a guarantee of a particular relationship outcome.
+            </p>
+        </section>
+
+        <section class="section" id="eligibility">
+            <h2><span class="number">03</span> Eligibility</h2>
+            <p>
+                You must be at least <strong>13 years old</strong> to use Bondly,
+                or meet the minimum age required to use the App under the laws
+                applicable to you.
+            </p>
+            <p>
+                If you are below the age of legal majority in your jurisdiction,
+                you should use Bondly only with the involvement and permission of
+                a parent or legal guardian where required by applicable law.
+            </p>
+            <p>Certain content or features may have additional age restrictions.</p>
+        </section>
+
+        <section class="section" id="responsibilities">
+            <h2><span class="number">04</span> User Responsibilities</h2>
+            <p>When using Bondly, you agree to:</p>
+            <ul>
+                <li>Use the App in accordance with applicable laws and regulations.</li>
+                <li>Provide accurate information when information is requested.</li>
+                <li>Use the App responsibly and respectfully.</li>
+                <li>Not misuse, abuse, interfere with, or attempt to compromise the App or its services.</li>
+                <li>Not reproduce, distribute, or commercially exploit Bondly's content without authorization.</li>
+                <li>Not use Bondly to engage in unlawful, abusive, fraudulent, or harmful activities.</li>
+            </ul>
+        </section>
+
+        <section class="section" id="subscriptions">
+            <h2><span class="number">05</span> Premium Features and Subscriptions</h2>
+            <p>
+                Bondly may offer premium subscriptions or other paid features that
+                provide access to additional relationship content, categories, tips,
+                and resources.
+            </p>
+            <p>
+                Where available, subscription prices, billing periods, and included
+                features will be displayed before purchase.
+            </p>
+            <p>
+                Subscriptions may automatically renew unless canceled before the
+                applicable renewal date through your <strong>Apple App Store or
+                Google Play account settings</strong>, depending on where you purchased
+                the subscription.
+            </p>
+            <p>
+                You are responsible for managing and canceling your subscription
+                through the platform used to purchase it.
+            </p>
+            <p>
+                Prices may vary by country, currency, taxes, promotional offers, and platform.
+            </p>
+            <p>
+                Except where required by applicable law, payments and refunds are
+                subject to the applicable Apple App Store or Google Play terms and policies.
+            </p>
+        </section>
+
+        <section class="section" id="ip">
+            <h2><span class="number">06</span> Intellectual Property</h2>
+            <p>
+                Bondly, including its software, interface, branding, logos, graphics,
+                text, illustrations, content, features, and other materials, is owned
+                by Erepal Technologies or its licensors and is protected by applicable
+                intellectual-property laws.
+            </p>
+            <p>
+                This Agreement does not transfer ownership of any intellectual-property
+                rights to you.
+            </p>
+            <p>
+                You receive only the limited license expressly granted in this Agreement.
+            </p>
+        </section>
+
+        <section class="section" id="feedback">
+            <h2><span class="number">07</span> User Content and Feedback</h2>
+            <p>
+                If you voluntarily provide feedback, suggestions, ideas, or other
+                communications regarding Bondly, you grant Erepal Technologies
+                permission to use such feedback for the purpose of improving,
+                developing, and operating our products and services without
+                compensation or obligation to you.
+            </p>
+            <p>
+                You remain responsible for any content or information you voluntarily
+                submit through features that allow user input.
+            </p>
+        </section>
+
+        <section class="section" id="third-party">
+            <h2><span class="number">08</span> Third-Party Services</h2>
+            <p>
+                Bondly may rely on or interact with third-party services, platforms,
+                operating systems, payment providers, analytics services, hosting
+                providers, or other technologies.
+            </p>
+            <p>
+                Your use of third-party services may be subject to the terms and
+                privacy policies of those third parties.
+            </p>
+            <p>
+                Erepal Technologies is not responsible for third-party services
+                that are outside our reasonable control.
+            </p>
+        </section>
+
+        <section class="section" id="privacy">
+            <h2><span class="number">09</span> Privacy</h2>
+            <p>
+                Your use of Bondly is also governed by our Privacy Policy, which
+                explains how information may be collected, used, stored, and protected.
+            </p>
+            <p>
+                By using Bondly, you acknowledge that you have had an opportunity
+                to review our Privacy Policy.
+            </p>
+        </section>
+
+        <section class="section" id="warranties">
+            <h2><span class="number">10</span> Disclaimer of Warranties</h2>
+            <p>
+                Bondly is provided on an <strong>"as is" and "as available"</strong>
+                basis to the fullest extent permitted by applicable law.
+            </p>
+            <p>We do not guarantee that:</p>
+            <ul>
+                <li>Bondly will always be available or uninterrupted.</li>
+                <li>The App will be free from errors or defects.</li>
+                <li>All information provided through the App will be complete, current, or suitable for your particular circumstances.</li>
+                <li>Use of Bondly will produce a particular relationship, dating, marriage, or personal-development outcome.</li>
+            </ul>
+            <p>
+                Relationship experiences and outcomes vary between individuals.
+                You are responsible for how you choose to apply information obtained through Bondly.
+            </p>
+        </section>
+
+        <section class="section" id="liability">
+            <h2><span class="number">11</span> Limitation of Liability</h2>
+            <p>
+                To the fullest extent permitted by applicable law, Erepal Technologies
+                and its directors, officers, employees, affiliates, licensors, and
+                service providers shall not be liable for indirect, incidental,
+                special, consequential, exemplary, or punitive damages arising from
+                or relating to your use of, or inability to use, Bondly.
+            </p>
+            <p>
+                Nothing in this Agreement excludes or limits liability that cannot
+                lawfully be excluded or limited under applicable law.
+            </p>
+        </section>
+
+        <section class="section" id="termination">
+            <h2><span class="number">12</span> Suspension and Termination</h2>
+            <p>
+                This Agreement remains effective until terminated by you or
+                Erepal Technologies.
+            </p>
+            <p>
+                You may terminate your use of Bondly at any time by deleting the
+                App and discontinuing its use.
+            </p>
+            <p>We may suspend or terminate your access to Bondly if you:</p>
+            <ul>
+                <li>Violate this Agreement.</li>
+                <li>Misuse the App or its services.</li>
+                <li>Engage in unlawful or harmful activity.</li>
+                <li>Attempt to interfere with the operation or security of the App.</li>
+                <li>Engage in conduct that may harm Bondly, Erepal Technologies, or other users.</li>
+            </ul>
+            <p>
+                Upon termination, the license granted to you under this Agreement will immediately end.
+            </p>
+        </section>
+
+        <section class="section" id="updates">
+            <h2><span class="number">13</span> Updates and Changes to the App</h2>
+            <p>
+                We may modify, update, suspend, or discontinue portions of Bondly
+                from time to time.
+            </p>
+            <p>
+                Updates may be required to maintain compatibility, security,
+                functionality, or compliance with applicable platform requirements.
+            </p>
+            <p>
+                We may also introduce new features or modify existing features,
+                including free and premium content.
+            </p>
+        </section>
+
+        <section class="section" id="changes">
+            <h2><span class="number">14</span> Changes to This Agreement</h2>
+            <p>
+                We may update this EULA from time to time.
+            </p>
+            <p>
+                When changes are made, we will update the "Last Updated" date and
+                may provide additional notice where appropriate.
+            </p>
+            <p>
+                Your continued use of Bondly after an updated Agreement becomes
+                effective constitutes your acceptance of the revised Agreement.
+            </p>
+        </section>
+
+        <section class="section" id="apple">
+            <h2><span class="number">15</span> Apple App Store Additional Terms</h2>
+            <p>If you downloaded Bondly through the Apple App Store, you acknowledge and agree that:</p>
+            <ul>
+                <li>This Agreement is between you and Erepal Technologies, and not Apple.</li>
+                <li>Apple has no obligation to provide maintenance or support services for Bondly.</li>
+                <li>Apple is not responsible for addressing claims relating to Bondly or your possession or use of the App.</li>
+                <li>Apple is not responsible for investigating, defending, settling, or discharging any third-party intellectual-property claim relating to Bondly.</li>
+                <li>Apple and its subsidiaries are third-party beneficiaries of this Agreement and may enforce this Agreement against you as a third-party beneficiary.</li>
+                <li>Your use of Bondly must also comply with the applicable Apple App Store Terms of Service.</li>
+            </ul>
+        </section>
+
+        <section class="section" id="google">
+            <h2><span class="number">16</span> Google Play Additional Terms</h2>
+            <p>
+                If you downloaded Bondly through Google Play, your use of the App
+                is also subject to the applicable Google Play Terms of Service and policies.
+            </p>
+            <p>
+                Google is not responsible for providing support or maintenance for
+                Bondly unless otherwise required by applicable law.
+            </p>
+        </section>
+
+        <section class="section" id="law">
+            <h2><span class="number">17</span> Governing Law</h2>
+            <p>
+                This Agreement shall be governed by and interpreted in accordance
+                with the laws applicable to Erepal Technologies, without regard to
+                conflict-of-law principles, except where applicable law requires otherwise.
+            </p>
+            <p>
+                Any dispute arising from this Agreement shall be handled by the
+                courts or dispute-resolution mechanisms having appropriate jurisdiction,
+                subject to applicable consumer-protection laws.
+            </p>
+        </section>
+
+        <section class="section" id="severability">
+            <h2><span class="number">18</span> Severability</h2>
+            <p>
+                If any provision of this Agreement is determined to be invalid,
+                unlawful, or unenforceable, the remaining provisions will continue
+                in full force and effect to the extent permitted by law.
+            </p>
+        </section>
+
+        <section class="section" id="entire">
+            <h2><span class="number">19</span> Entire Agreement</h2>
+            <p>
+                This EULA, together with the Bondly Privacy Policy and any other
+                applicable policies or terms referenced within the App, constitutes
+                the entire agreement between you and Erepal Technologies regarding
+                your use of Bondly.
+            </p>
+        </section>
+
+        <section class="section contact" id="contact">
+            <div>
+                <h2><span class="number">20</span> Contact Us</h2>
+                <p>
+                    If you have questions, concerns, or requests regarding this Agreement,
+                    please contact Erepal Technologies.
+                </p>
+                <a class="contact-email" href="mailto:erepaltech@outlook.com">
+                    erepaltech@outlook.com
+                </a>
+            </div>
+            <div class="logo">B<span style="font-weight:500">♡</span></div>
+        </section>
+
+    </article>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-links">
+            <a href="support.html">Support</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="marketing.html">Marketing</a>
+        </div>
+        <div>© 2026 Bondly • Erepal Technologies • All Rights Reserved.</div>
+    </div>
+</footer>
+
+</body>
+</html>
